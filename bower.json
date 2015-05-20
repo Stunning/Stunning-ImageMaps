@@ -1,0 +1,27 @@
+{
+  "name": "stunning-imagemaps",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Stunning/Stunning-ImageMaps",
+  "authors": [
+    "Johan Hermansson <johan@stunning.se>"
+  ],
+  "description": "Converts HTML image maps to SVG equivalents.",
+  "main": "src/stunning-imagemaps.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "imagemaps",
+    "svg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

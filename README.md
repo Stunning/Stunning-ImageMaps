@@ -1,5 +1,5 @@
 # Stunning ImageMaps
-Replaces HTML Image maps with a SVG equivalent.
+Converts HTML image maps to SVG equivalents.
 
 ## Background
 The initial reason for this plugin was to fix the image maps click problem in iOS8. But under the way I realized the plugin also could fix the responsive problem at the same time.
