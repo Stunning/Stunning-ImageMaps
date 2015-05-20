@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ImageMaps to SVG</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	
+	<div class="container">
+		<div class="imgmap__wrap">
+			<img src="img/img.png" alt="" usemap="#map" class="imgmap__image" />
+			
+			<map name="map">
+				<area shape="rect" coords="20,20,120,120" href="http://stunning.se" alt="" />
+				<area shape="circle" coords="70,230,50" href="http://stunning.se/about" alt="" />
+				<area shape="poly" coords="175,119,237,100,275,150,237,200,175,180" href="#hashbang" alt="">
+			</map>
+		</div>
+	</div>
+
+	<script src="src/imagemaps-to-svg.js"></script>
+
+	<script>
+		stunningImageMaps.setup({
+			inlineStyle: false,
+			useImageParentAsWrap: true
+		});
+		
+		stunningImageMaps.run();
+	</script>
+
+</body>
+</html>
