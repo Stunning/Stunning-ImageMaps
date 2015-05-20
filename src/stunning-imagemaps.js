@@ -13,7 +13,8 @@
 	'use strict';
 
 	var svgElNS = "http://www.w3.org/2000/svg",
-	svgAttNS = "http://www.w3.org/2000/xmlns/";
+	svgAttNS = "http://www.w3.org/2000/xmlns/",
+	supportsSVG = !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
 
 	var options = {
 		inlineStyle: true,
@@ -40,6 +41,10 @@
 	};
 
 	var start = function( el ) {
+		if( ! supportsSVG) {
+			return;
+		}
+
 		if( ! el) {
 			el = findElements();
 		} else if( !! el.tagName) {
