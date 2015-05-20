@@ -39,7 +39,7 @@
 		options = extendObject(options, opts);
 	};
 
-	var run = function( el ) {
+	var start = function( el ) {
 		if( ! el) {
 			el = findElements();
 		} else if( !! el.tagName) {
@@ -74,7 +74,7 @@
 		}
 
 		return el;
-	}
+	};
 
 	// Get img and map elements by img or map element
 	var getElements = function(el) {
@@ -183,10 +183,10 @@
 		}
 
 		els.areas.forEach(function( area ) {
-			var area = createSVGChild( area );
+			var shape = createSVGChild( area );
 
-			if(area !== false) {
-				svg.appendChild( area );
+			if(shape !== false) {
+				svg.appendChild( shape );
 			}
 		});
 
@@ -293,7 +293,7 @@
 
 	return {
 		setup: setup,
-		run: run
+		toSVG: start
 	};
 
 }));

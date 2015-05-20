@@ -4,13 +4,13 @@ Replaces HTML Image maps with a SVG equivalent.
 ## Background
 The initial reason for this plugin was to fix the image maps click problem in iOS8. But under the way I realized the plugin also could fix the responsive problem at the same time.
 
-## How to install
+## Installation
 The plugin supports ”globals”, AMD and CommonJS. Install with `bower install stunning-imagemaps` or `npm install stunning-imagemaps`.
 
-## How to use
+## Initialize
 
 #### Globals
-The plugin is available in the `window` object as `window.stunningImageMaps`, so just use like this:
+The plugin is available in the `window` object as `window.stunningImageMaps`, so it's available to use like this:
 
 
 ```
@@ -21,14 +21,14 @@ stunningImageMaps.run();
 Get “the real“ element when using in a jQuery environment.
 
 ```
-stunningImageMaps.run( $('map#imgmap').get(0) );
+stunningImageMaps.toSVG( $('map#imgmap').get(0) );
 ```
 
 #### Browserify (CommonJS)
 ```
 var stunningImageMaps = require('stunning-imagemaps');
 
-stunningImageMaps.run();
+stunningImageMaps.toSVG();
 ```
 ## Options
 The options object and their default setting.
@@ -50,13 +50,11 @@ The options object and their default setting.
 });
 ```
 ## Methods
-Available methods:
 
 ```
 // Change default options
 .setup( options );
 
-// Change specific imagemaps to SVG,
-// either the img or map element.
-.run( [nothing for all, element or elements for specific] )
+// Convert specific or all imagemaps to SVG, by giving either the img or map element.
+.toSVG( [nothing for all, element or elements for specific] )
 ```
