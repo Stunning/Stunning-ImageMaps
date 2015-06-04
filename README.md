@@ -14,7 +14,7 @@ The plugin is available in the `window` object as `window.stunningImageMaps`, so
 
 
 ```
-stunningImageMaps.run();
+stunningImageMaps.toSVG();
 ```
 
 #### jQuery
