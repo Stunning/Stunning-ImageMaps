@@ -1,6 +1,6 @@
 {
   "name": "stunning-imagemaps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts HTML image maps to SVG equivalents.",
   "main": "src/stunning-imagemaps.js",
   "dependencies": {},
